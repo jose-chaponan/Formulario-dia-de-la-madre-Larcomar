@@ -7,5 +7,8 @@ Formulario para recopilación de información para Base de datos.
 - Responsive
 - Bstemp
 
+## Agencia
+AdRetail, para la cuenta de Lacomar.
+
 ## Versión.
 1.0
