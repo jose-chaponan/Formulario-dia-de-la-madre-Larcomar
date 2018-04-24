@@ -1,0 +1,187 @@
+$color_rosa: #E07769
+$color_gris: #666666
+$color_blanco: #ffffff
+
+$fuente_titulos: "Archer-boldItal-pro"
+$fuente_botones: "Archer-mediumItal-pro"
+$fuente_textos: "Archer-lightItal-pro"
+
+body
+    overflow-x: hidden    
+body,
+input,
+textarea,
+select
+    font-family: $fuente_textos
+    font-size: 1.6rem
+
+input[type=date], 
+input[type=email], 
+input[type=number], 
+input[type=password], 
+input[type=text],
+select
+    background-color: $color_blanco
+    border: none
+    border-bottom: $color_rosa 2px solid
+    box-sizing: content-box
+    font-family: $fuente_botones
+    font-size: 1.8rem
+    color: $color_gris
+    width: 100%
+    margin: 0px
+    padding: 0px 7px
+    appearance: inherit
+    border-radius: 0px
+    outline: none
+
+select
+    padding: 5px 7px 0
+
+@keyframes shake
+    10%,
+    30%,
+    50%,
+    70%,
+    90% 
+        transform: translate3d(-10px, 0, 0)
+    
+    20%,
+    40%,
+    60%,
+    80% 
+        transform: translate3d(10px, 0, 0)
+    
+
+@media all and (min-width: 1px)
+    .boton
+        background-color: $color_rosa
+        border: 1px solid $color_rosa
+        color: $color_blanco
+        cursor: pointer
+        display: block
+        font-family: $fuente_botones
+        font-size: 2rem
+        margin: 5vh auto
+        padding: 10px 
+        text-align: center
+        width: 80%
+    
+    .boton:hover
+        background-color: $color_blanco
+        color: $color_rosa
+
+    .slider
+        background-color: $color_gris
+        position: relative
+        width: 100%
+        margin-bottom: 7vh
+        min-height: 40vh
+        z-index: 1
+    
+    .contenidos
+        position: relative
+        width: 100%
+        z-index: 2
+    
+    .vistas
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+    .active_vistas
+        position: relative
+        opacity: 1
+        z-index: 3
+    
+    .shake
+        animation-name: shake
+        animation-direction: linear
+        animation-iteration-count: 2
+        animation-duration: .7s
+    
+    h2
+        color: $color_rosa
+        font-family: $fuente_botones
+        font-size: 2rem
+        margin: 5vh 0 2vh
+    
+    label
+        width: 100%
+        margin-top: 2vh
+        color: $color_rosa
+        padding: 7px 16px 7px 0px
+    
+    form
+        section
+            width: 100%
+    
+    .opciones
+        background-color: $color_rosa
+        border-radius: 50%
+        margin: 3vh 1vw
+        position: relative
+        opacity: .5
+    
+    .opciones:hover
+        opacity: 1
+
+    .opciones::before
+        content: attr(data-title)
+        position: absolute
+        bottom: -20px
+        left: 0
+        right: 0
+        text-align: center
+        font-size: 1.4rem
+        color: $color_gris
+        font-family: $fuente_botones
+
+
+@media all and (min-width: 900px)
+
+    .boton
+        width: 150px
+
+    .slider
+        width: 40%
+        margin-bottom: 0
+        min-height: 100vh
+
+    .contenidos
+        width: 60%
+        min-height: 100vh
+
+    .contenidos::before
+        background-color: $color_blanco
+        bottom: 0
+        content: ""
+        height: 100%
+        position: absolute
+        right: 0
+        top: 0
+        transform: skew(-7deg)
+        width: 113%
+        z-index: 2
+
+    input[type=date], 
+    input[type=email], 
+    input[type=number], 
+    input[type=password], 
+    input[type=text], 
+    select, 
+    textarea,
+    label
+        width: 90%
+
+    input[type=date], 
+    input[type=email], 
+    input[type=number], 
+    input[type=password], 
+    input[type=text], 
+    select
+        text-align: right
+
+    form
+        section
+            width: 50%

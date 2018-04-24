@@ -1,0 +1,229 @@
+body {
+  overflow-x: hidden;
+}
+
+body,
+input,
+textarea,
+select {
+  font-family: "Archer-lightItal-pro";
+  font-size: 1.6rem;
+}
+
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=text],
+select {
+  background-color: #ffffff;
+  border: none;
+  border-bottom: #E07769 2px solid;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-family: "Archer-mediumItal-pro";
+  font-size: 1.8rem;
+  color: #666666;
+  width: 100%;
+  margin: 0px;
+  padding: 0px 7px;
+  -webkit-appearance: inherit;
+     -moz-appearance: inherit;
+          appearance: inherit;
+  border-radius: 0px;
+  outline: none;
+}
+
+select {
+  padding: 5px 7px 0;
+}
+
+@-webkit-keyframes shake {
+  10%,
+30%,
+50%,
+70%,
+90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+40%,
+60%,
+80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%,
+30%,
+50%,
+70%,
+90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+40%,
+60%,
+80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+@media all and (min-width: 1px) {
+  .boton {
+    background-color: #E07769;
+    border: 1px solid #E07769;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: "Archer-mediumItal-pro";
+    font-size: 2rem;
+    margin: 5vh auto;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .boton:hover {
+    background-color: #ffffff;
+    color: #E07769;
+  }
+
+  .slider {
+    background-color: #666666;
+    position: relative;
+    width: 100%;
+    margin-bottom: 7vh;
+    min-height: 40vh;
+    z-index: 1;
+  }
+
+  .contenidos {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .vistas {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .active_vistas {
+    position: relative;
+    opacity: 1;
+    z-index: 3;
+  }
+
+  .shake {
+    -webkit-animation-name: shake;
+            animation-name: shake;
+    -webkit-animation-direction: linear;
+            animation-direction: linear;
+    -webkit-animation-iteration-count: 2;
+            animation-iteration-count: 2;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+  }
+
+  h2 {
+    color: #E07769;
+    font-family: "Archer-mediumItal-pro";
+    font-size: 2rem;
+    margin: 5vh 0 2vh;
+  }
+
+  label {
+    width: 100%;
+    margin-top: 2vh;
+    color: #E07769;
+    padding: 7px 16px 7px 0px;
+  }
+
+  form section {
+    width: 100%;
+  }
+
+  .opciones {
+    background-color: #E07769;
+    border-radius: 50%;
+    margin: 3vh 1vw;
+    position: relative;
+    opacity: 0.5;
+  }
+
+  .opciones:hover {
+    opacity: 1;
+  }
+
+  .opciones::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666666;
+    font-family: "Archer-mediumItal-pro";
+  }
+}
+@media all and (min-width: 900px) {
+  .boton {
+    width: 150px;
+  }
+
+  .slider {
+    width: 40%;
+    margin-bottom: 0;
+    min-height: 100vh;
+  }
+
+  .contenidos {
+    width: 60%;
+    min-height: 100vh;
+  }
+
+  .contenidos::before {
+    background-color: #ffffff;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: skew(-7deg);
+            transform: skew(-7deg);
+    width: 113%;
+    z-index: 2;
+  }
+
+  input[type=date],
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=text],
+  select,
+  textarea,
+  label {
+    width: 90%;
+  }
+
+  input[type=date],
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=text],
+  select {
+    text-align: right;
+  }
+
+  form section {
+    width: 50%;
+  }
+}
