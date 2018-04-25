@@ -1,8 +1,34 @@
+var interval = null;
 function opciones(){
     var w_opciones = $(".opciones").width();
     $(".opciones").css({
         "height": w_opciones
     })
+}
+
+function acciones() {
+    $(".content").animate({
+            "opacity": 1
+        }, 300, function () {
+            var success_frm = $("#success_frm").val();
+            if (success_frm != "") {
+                switch (success_frm) {
+                    case "listo":
+                    $(".content").delay(1500).animate({
+                            "opacity": 0
+                        }, 300,
+                        function () {
+                            $("#titulo_mensaje").html("GRACIAS POR PARTICIPAR");
+                            $("#mensaje").html("Mucha suerte");
+                            $(".content").delay(500).animate({
+                                "opacity": 1
+                            }, 300);
+                            clearInterval(interval);
+                        });
+                    break;
+                }
+            }
+    });
 }
 
 $( document ).ready( function() {
@@ -31,5 +57,68 @@ $( document ).ready( function() {
     $(window).on("resize", function () { 
         opciones();
     });
+
+    $('.slider_img').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        fade: true,
+        speed: 2000
+    });
+
+    $("#formulario").on("submit", function(){
+        event.preventDefault();
+        $(this).find(".enviar").prop("disabled", true);
+        $("#titulo_mensaje").html("Espere por favor...");
+        $("#mensaje").html("");
+        interval = setInterval(function () {
+            acciones();
+        }, 2000);
+    });
+
+    // var restau = false;
+    // var tienda = false;
+    // var teatro = false;
+
+    // $(".opciones").on("click", function(){ 
+    //     var category = $(this).data("title");
+    //     if (category == "Restaurantes"){
+    //         if(restau){
+    //             $(".restaurante").val("no");
+    //             $(this).removeClass("opcion_activa");
+    //             restau = false;
+    //         }
+    //         else{
+    //             $(".restaurante").val("si");
+    //             $(this).addClass("opcion_activa");
+    //             restau = true;
+    //         }
+    //     }
+    //     if (category == "Tiendas") {
+    //         if (tienda) {
+    //             $(".tiendas").val("no");
+    //             $(this).removeClass("opcion_activa");
+    //             tienda = false;
+    //         }
+    //         else{
+    //             $(".tiendas").val("si");
+    //             $(this).addClass("opcion_activa");
+    //             tienda = true;
+    //         }
+    //     }
+    //     if (category == "Teatro") {
+    //         if (teatro) {
+    //             $(".teatro").val("no");
+    //             $(this).removeClass("opcion_activa");
+    //             teatro = false;
+    //         }
+    //         else{
+    //             $(".teatro").val("si");
+    //             $(this).addClass("opcion_activa");
+    //             teatro = true;
+    //         }
+    //     }
+    // });
+
 
 });

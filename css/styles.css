@@ -15,7 +15,8 @@ input[type=email],
 input[type=number],
 input[type=password],
 input[type=text],
-select {
+select,
+textarea {
   background-color: #ffffff;
   border: none;
   border-bottom: #E07769 2px solid;
@@ -35,6 +36,9 @@ select {
 }
 
 select {
+  background-image: url(../images/triangulo.svg);
+  background-repeat: no-repeat;
+  background-position: 97% center;
   padding: 5px 7px 0;
 }
 
@@ -102,6 +106,41 @@ select {
     z-index: 1;
   }
 
+  .slick-list {
+    height: 100%;
+  }
+  .slick-list .slick-track {
+    height: 100%;
+  }
+
+  .slider .slider_img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slider .slider_img .imagen {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slider .slider_img .img1 {
+    background-image: url("../images/slide1.jpg");
+  }
+  .slider .slider_img .img2 {
+    background-image: url("../images/slide2.jpg");
+  }
+
+  .logo {
+    position: fixed;
+    top: 3vh;
+    z-index: 99;
+    width: 14%;
+    left: 2vw;
+  }
+
   .contenidos {
     position: relative;
     width: 100%;
@@ -120,13 +159,14 @@ select {
     z-index: 3;
   }
 
-  .shake {
+  .shake,
+  .requerido {
     -webkit-animation-name: shake;
             animation-name: shake;
     -webkit-animation-direction: linear;
             animation-direction: linear;
-    -webkit-animation-iteration-count: 2;
-            animation-iteration-count: 2;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
     -webkit-animation-duration: 0.7s;
             animation-duration: 0.7s;
   }
@@ -135,7 +175,7 @@ select {
     color: #E07769;
     font-family: "Archer-mediumItal-pro";
     font-size: 2rem;
-    margin: 5vh 0 2vh;
+    margin: 2vh 0 2vh;
   }
 
   label {
@@ -148,23 +188,38 @@ select {
   form section {
     width: 100%;
   }
-
-  .opciones {
+  form .last_section {
+    margin-top: 5vh;
+  }
+  form .opciones {
     background-color: #E07769;
     border-radius: 50%;
     margin: 3vh 1vw;
     position: relative;
     opacity: 0.5;
+    min-width: 83px;
+    min-height: 83px;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
   }
-
-  .opciones:hover {
+  form .opc1 {
+    background-image: url(../images/restaurante.svg);
+  }
+  form .opc2 {
+    background-image: url(../images/tiendas.svg);
+  }
+  form .opc3 {
+    background-image: url(../images/teatro.svg);
+  }
+  form .opciones:hover,
+  form .opcion_activa {
     opacity: 1;
   }
-
-  .opciones::before {
+  form .opciones::before {
     content: attr(data-title);
     position: absolute;
-    bottom: -20px;
+    bottom: -4vh;
     left: 0;
     right: 0;
     text-align: center;
@@ -172,8 +227,23 @@ select {
     color: #666666;
     font-family: "Archer-mediumItal-pro";
   }
+
+  .legal {
+    font-size: 1.3rem;
+    color: #666666;
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+  .legal a {
+    color: #666666;
+    text-decoration: underline;
+  }
 }
 @media all and (min-width: 900px) {
+  h2 {
+    margin-top: 7vh;
+  }
+
   .boton {
     width: 150px;
   }
@@ -194,15 +264,21 @@ select {
     margin-left: 40%;
   }
 
-  .contenidos::after {
+  .contenidos::after,
+  form::after {
     content: "";
     background: #ffffff;
     position: fixed;
     z-index: 5;
-    height: 5vh;
+    height: 9vh;
     width: 60%;
     right: 0;
     top: 0;
+  }
+
+  form::after {
+    top: initial;
+    bottom: 0;
   }
 
   .contenidos::before {
@@ -230,19 +306,20 @@ select {
     width: 90%;
   }
 
-  input[type=date],
-  input[type=email],
-  input[type=number],
-  input[type=password],
-  input[type=text],
-  select {
-    text-align: right;
-  }
-
   form {
     margin-top: 5vh;
   }
   form section {
     width: 50%;
+  }
+}
+@media all and (min-width: 1600px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media all and (min-width: 1900px) {
+  html {
+    font-size: 90%;
   }
 }
