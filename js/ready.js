@@ -1,9 +1,9 @@
 var interval = null;
-function opciones(){
-    var w_opciones = $(".opciones").width();
-    $(".opciones").css({
+function opciones( classTag ){
+    var w_opciones = $("."+classTag).width();
+    $("."+classTag).css({
         "height": w_opciones
-    })
+    });
 }
 
 function acciones() {
@@ -52,10 +52,12 @@ $( document ).ready( function() {
         }
     });
 
-    opciones();
+    opciones("opciones");
+    opciones("premios");
 
     $(window).on("resize", function () { 
-        opciones();
+        opciones("opciones");
+        opciones("premios");
     });
 
     $('.slider_img').slick({

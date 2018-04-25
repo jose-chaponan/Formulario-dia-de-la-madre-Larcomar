@@ -78,6 +78,14 @@ select {
   }
 }
 @media all and (min-width: 1px) {
+  .oculta_movil {
+    display: none;
+  }
+
+  .oculta_escritorio {
+    display: block;
+  }
+
   .boton {
     background-color: #E07769;
     border: 1px solid #E07769;
@@ -97,15 +105,6 @@ select {
     color: #E07769;
   }
 
-  .slider {
-    background-color: #666666;
-    position: relative;
-    width: 100%;
-    margin-bottom: 7vh;
-    min-height: 40vh;
-    z-index: 1;
-  }
-
   .slick-list {
     height: 100%;
   }
@@ -113,6 +112,14 @@ select {
     height: 100%;
   }
 
+  .slider {
+    background-color: #666666;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10vh;
+    min-height: 45vh;
+    border-bottom: 7px solid #E07769;
+  }
   .slider .slider_img {
     position: absolute;
     top: 0;
@@ -122,7 +129,7 @@ select {
   }
   .slider .slider_img .imagen {
     height: 100%;
-    background-position: center center;
+    background-position: center 9%;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -134,17 +141,17 @@ select {
   }
 
   .logo {
-    position: fixed;
+    position: absolute;
     top: 3vh;
     z-index: 99;
-    width: 14%;
+    width: 40%;
     left: 2vw;
   }
 
   .contenidos {
     position: relative;
     width: 100%;
-    z-index: 2;
+    top: -4vh;
   }
 
   .vistas {
@@ -228,6 +235,46 @@ select {
     font-family: "Archer-mediumItal-pro";
   }
 
+  .premios {
+    background-image: url("../images/premios.png");
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 3px solid #E07769;
+    position: absolute;
+    width: 40%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 99;
+    right: 2%;
+    bottom: -10%;
+    margin: 0;
+    -webkit-transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 0.8s;
+  }
+
+  .premios:hover {
+    -webkit-transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 0.8s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .premios::before {
+    content: "PREMIO";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 38.5%;
+    margin: auto;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    color: #E07769;
+    font-size: 1.4rem;
+    font-family: "Archer-boldItal-pro";
+    letter-spacing: 1px;
+  }
+
   .legal {
     font-size: 1.3rem;
     color: #666666;
@@ -239,7 +286,40 @@ select {
     text-decoration: underline;
   }
 }
+@media all and (min-width: 765px) {
+  .slider {
+    height: 50vh;
+    border-bottom: 0px;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .premios {
+    width: 30%;
+    position: absolute;
+    margin: auto;
+    top: initial;
+    right: 2%;
+    bottom: -15%;
+    left: initial;
+  }
+
+  .premios::before {
+    left: 40%;
+    font-size: 2rem;
+  }
+}
 @media all and (min-width: 900px) {
+  .oculta_movil {
+    display: block;
+  }
+
+  .oculta_escritorio {
+    display: none;
+  }
+
   h2 {
     margin-top: 7vh;
   }
@@ -291,6 +371,7 @@ select {
     top: 0;
     -webkit-transform: skew(-7deg);
             transform: skew(-7deg);
+    border-left: 6px solid #E07769;
     width: 65%;
     z-index: 2;
   }
@@ -311,6 +392,20 @@ select {
   }
   form section {
     width: 50%;
+  }
+
+  .premios {
+    width: 20%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: initial;
+    bottom: 0;
+    left: 24%;
+  }
+
+  .premios::before {
+    left: 43%;
   }
 }
 @media all and (min-width: 1600px) {
