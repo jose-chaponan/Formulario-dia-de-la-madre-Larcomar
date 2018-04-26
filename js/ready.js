@@ -6,6 +6,16 @@ function opciones( classTag ){
     });
 }
 
+var close_modal_larcomar = function () {
+    $(".overflow").addClass('fadeOutoverflow');
+    $(".modal").addClass('fadeOutmodal');
+
+    setTimeout(function () {
+        $(".overflow").removeClass('fadeOutoverflow fadeInoverflow');
+        $(".modal").removeClass('fadeOutmodal fadeInmodal');
+    }, 500);
+};
+
 function acciones() {
     $(".content").animate({
             "opacity": 1
@@ -23,9 +33,33 @@ function acciones() {
                             $(".content").delay(500).animate({
                                 "opacity": 1
                             }, 300);
-                            clearInterval(interval);
                         });
+                        clearInterval(interval);
                     break;
+                    case "existes":
+                        $("#titulo_mensaje").html("YA TE ENCUENTRAS REGISTRADO");
+                        $("#mensaje").html("Gracias por llenar su información");
+                        $(".content").delay(500).animate({
+                            "opacity": 1
+                        }, 300);
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000);
+                        clearInterval(interval);
+                    break;
+                    case "emailexiste":
+                        $("#formulario").find(".enviar").prop("disabled", false);
+                        $("#titulo_mensaje").html("EL EMAIL YA SE ENCUENTRA REGISTRADO");
+                        $("#mensaje").html("Por favor, intente con otra cuenta de email ");
+                        $(".content").delay(500).animate({
+                            "opacity": 1
+                        }, 300, function () {
+                            $("#success_frm").val("");
+                            setTimeout(() => {
+                               close_modal_larcomar(); 
+                            }, 3000);
+                        });
+                        clearInterval(interval);
                 }
             }
     });
