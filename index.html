@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://bastemp.com/css/bastemp.min.css?ver=1.1.2">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="http://navike21.com/fonts/archer/fonts.css">
-    <link rel="stylesheet" href="css/styles.min.css?ver=1.1.0">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.1.6">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -17,14 +17,15 @@
     <script src="js/ready.min.js?ver=1.0.5"></script>
 </head>
 <body class="section_top_center w_100">
-    <div class="premios oculta_movil"></div>
+    <!-- <div class="premios oculta_movil"></div> -->
     <section class="slider">
         <a href="http://larcomar.com" target="_blank" class="logo"> <img src="images/logo.svg" alt="Larcomar" width="100%"> </a>
         <div class="slider_img">
             <div class="imagen img1"></div>
             <div class="imagen img2"></div>
         </div>
-        <div class="premios oculta_escritorio"></div>
+        <!-- <div class="premios oculta_escritorio"></div> -->
+        <img src="images/operadores.jpg" width="100%" alt="Operadores" class="operadores">
     </section>
     <section class="contenidos section_middle_center">
         <div class="vistas w_80 section_top_center vista1 active_vistas">
@@ -47,7 +48,7 @@
             <section class="section_top_right">
                 <label for="txtemail">Email:</label>
                 <input type="text" name="txtemail" id="txtemail" class="required email">
-                <label for="txtdistrito">distrito:</label>
+                <label for="txtdistrito">Distrito:</label>
                 <input type="text" name="txtdistrito" id="txtdistrito" class="required">
                 <label for="selsexo">Sexo:</label>
                 <select name="selsexo" id="selsexo" class="required">
@@ -70,14 +71,96 @@
             <textarea name="txtotros" id="txtotros" rows="3" class="w_100 align_center required"></textarea>-->
             <input type="submit" value="Enviar" class="enviar boton">
 
-            <div class="legal">
-                De acuerdo con la Ley 29733, se informa que sus datos personales serán almacenados en nuestro Banco de Datos, serán tratados por el tiempo necesario y custodiados con las medidas de seguridad y confidencialidad pertinentes. El ejercicio de sus derechos o cualquier otra consulta sobre el tratamiento, se podrá efectuar en <a href="mailto:lpdp@parauco.com" target="_blank">lpdp@parauco.com</a>.
-            </div>
         </form>
     </section>
+    <img src="images/operadores.jpg" width="100%" alt="Operadores" class="operadores2">
+    <div class="legal">
+        De acuerdo con la Ley 29733, se informa que sus datos personales serán almacenados en nuestro Banco de Datos, serán tratados por el tiempo necesario y custodiados con las medidas de seguridad y confidencialidad pertinentes. El ejercicio de sus derechos o cualquier otra consulta sobre el tratamiento, se podrá efectuar en <a href="mailto:lpdp@parauco.com" target="_blank">lpdp@parauco.com</a>.
+        <div class="w_100 section_middle_center mas">
+            <a class="modal_on" data-iddestinomodal="condiciones-restricciones">Ver condiciones y restricciones</a>
+            <a class="modal_on" data-iddestinomodal="premios">Ver Premios</a>
+        </div>
+    </div>
     
     <input id="success_frm" type="hidden" name="success_frm">
     <div class="overflow"></div>
+    <div id="condiciones-restricciones" class="w_100 section_middle_center full_min_h modal">
+        <div class="close w_70 section_top_right">
+            <a class="modal_off section_middle_center">X</a>
+        </div>
+        <article class="section_top_center section_middle_center">
+            <div class="contenido w_90">
+                <h3 class="align_left">Mecanismo:</h3>
+                <p class="align_justify">
+                    Participan en la campaña, todas aquellas personas que se inscriban a través de este formulario, dejando sus datos personales completos (nombres, apellidos, fecha de nacimiento, email, distrito y sexo), sus datos quedarán registrados en la base de datos que se utilizará para la presente campaña y de esta manera, podrán participar del sorteo llevándose los premios que detallan bajo el título de PREMIOS.
+                </p>
+                <p class="align_justify">
+                    El sorteo se realizará utilizando la base de datos de todos los participantes de forma aleatoria.
+                </p>
+                <h3 class="align_left">Condiciones y/o Restricciones:</h3>
+                <ul>
+                    <li>Duración de la campaña: del 04 al 13 de mayo del 2018.</li>
+                    <li>Fecha de sorteo el 14 de mayo del 2018.</li>
+                    <li>Los premios no podrán ser cambiados por dinero ni otro bien.</li>
+                    <li>Solo participan las personas que llenaron sus datos completos (nombres, apellidos, fecha de nacimiento, email, distrito y sexo).</li>
+                    <li>El sorteo se realizará en las oficinas de Larcomar, utilizando la base de datos con la relación de todos los participantes de forma aleatoria.</li>
+                    <li>No participan menores de edad ni personal administrativo del Centro Comercial, Grupo Parque Arauco, personal de las tiendas del Centro Comercial.</li>
+                    <li>Condiciones sujetas a cambio sin previo aviso.</li>
+                </ul>
+            </div>
+        </article>
+
+    </div>
+    <div id="premios" class="w_100 section_middle_center full_min_h modal">
+        <div class="close w_70 section_top_right">
+            <a class="modal_off section_middle_center">X</a>
+        </div>
+        <article class="section_top_center section_middle_center">
+            <div class="contenido w_90">
+                <h2>DATOS DE LOS PREMIOS</h2>
+                <h3 class="align_left">Teatro La Plaza:</h3>
+                <p class="align_justify">
+                    2 entradas gratis por cada obras de adulto durante el 2018
+                </p>
+                <ul>
+                    <li>Las entradas no son válidas para obras de niños.</li>
+                    <li>Para utilizar las entradas deberá de realizar la reserva al Call Center del Teatro al número 5050550.</li>
+                    <li>Las entradas son válidas sujetas a disponibilidad de la sala.</li>
+                </ul>
+                <h3 class="align_left">La Vaca Loca:</h3>
+                <p class="align_justify">
+                    Una parrilla para 2 en el restaurante La Vaca Loca de Larcomar, que incluye:
+                </p>
+                <ul>
+                    <li>Un chorizo y una morcilla.</li>
+                    <li>Bife de Chorizo argentino o lomo fino (300gr).</li>
+                    <li>Baby Beef Argentino (300gr.) o pechuga de pollo.</li>
+                    <li>Papas Fritas .</li>
+                    <li>Ensalada Mixta para dos.</li>
+                    <li>Una botella de vino de la casa (375ml.).</li>
+                </ul>
+                <h3 class="align_left">Montalvo Spa:</h3>
+                <p class="align_justify">
+                    Un día de servicio en Montalvo Spa en Larcomar, para dos personas, que incluye:
+                </p>
+                <ul>
+                    <li>Lavado.</li>
+                    <li>Tratamiento.</li>
+                    <li>Corte y cepillado.</li>
+                </ul>
+                <h3 class="align_left">Fauchon:</h3>
+                <p class="align_justify">
+                     Una canasta, que incluye:
+                </p>
+                <ul>
+                    <li>Galletas de frambuesa (16 unidades).</li>
+                    <li>1 Corazón fucsia (Bombones de chocolate de leche).</li>
+                    <li>1 Nougat.</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
     <div id="mensaje_frm" class="w_100 section_middle_center full_min_h modal">
         <div class="content section_top_center">
             <img src="images/logo.svg" alt="Larcomar" style="min-width:150px; margin-bottom: 30px;">

@@ -178,11 +178,21 @@ select {
             animation-duration: 0.7s;
   }
 
+  strong {
+    font-family: "Archer-mediumItal-pro";
+  }
+
   h2 {
     color: #E07769;
     font-family: "Archer-mediumItal-pro";
     font-size: 2rem;
     margin: 2vh 0 2vh;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    color: #E07769;
+    font-family: "Archer-mediumItal-pro";
   }
 
   label {
@@ -276,17 +286,106 @@ select {
   }
 
   .legal {
+    position: relative;
+    bottom: 0;
     font-size: 1.3rem;
     color: #666666;
-    margin-bottom: 10vh;
     text-align: center;
+    width: 80%;
+    margin-bottom: 5vh;
   }
   .legal a {
     color: #666666;
     text-decoration: underline;
   }
+  .legal .mas {
+    margin-top: 2vh;
+  }
+  .legal .mas a {
+    margin: 0 5%;
+    color: #E07769;
+    font-weight: 700;
+  }
+
+  .modal .close {
+    width: 70%;
+  }
+  .modal .close a {
+    background-color: #E07769;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .modal article {
+    background-color: #ffffff;
+    height: 70vh;
+    width: 70%;
+    position: relative;
+  }
+  .modal article .contenido {
+    overflow: auto;
+    height: 65vh;
+  }
+  .modal article .contenido h2 {
+    margin: 5vh 0;
+  }
+  .modal article .contenido h3 {
+    margin: 17px 0;
+  }
+  .modal article .contenido p {
+    width: 100%;
+    margin: 7px 0;
+  }
+  .modal article .contenido ul {
+    margin-left: 2vw;
+  }
+  .modal article .contenido ul li {
+    padding: 0 15px;
+    margin: 5px 0;
+    position: relative;
+  }
+  .modal article .contenido ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: #E07769;
+  }
+
+  .operadores {
+    display: none;
+  }
+
+  .operadores2 {
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 3vh;
+  }
 }
 @media all and (min-width: 765px) {
+  .operadores2 {
+    display: none;
+  }
+
+  .operadores {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 98;
+    left: 0;
+    width: 35%;
+  }
+
+  .legal {
+    position: fixed;
+    z-index: 99;
+    width: 50%;
+    right: 7%;
+  }
+
   .slider {
     height: 50vh;
     border-bottom: 0px;
